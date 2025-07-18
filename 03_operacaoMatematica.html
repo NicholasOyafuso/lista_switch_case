@@ -9,11 +9,59 @@
     */
 
     //ENTRADA
+    const numero1 = Number(prompt("Digite o primeiro número:"));
+    const numero2 = Number(prompt("Digite o segundo número:"));
+    const operacao = prompt("Escolha a operação: +, -, *, /");
+
 
 
     //PROCESSAMENTO
+    let resultado;
+    switch (operacao) {
+        case '+':
+            resultado = numero1 + numero2;
+            break;
+        case '-':
+            resultado = numero1 - numero2;
+            break;
+        case '*':
+            resultado = numero1 * numero2;
+            break;
+        case '/':
+            resultado = numero1 / numero2;
+            break;
+            alert(`O resultado é ${resultado}`)
 
-    
+    }
+    if (Number.isInteger(resultado)) {
+        switch (true) {
+            case resultado % 2 === 0:
+                alert(` ${resultado} é par.`);
+                break;
+            case resultado % 2 !== 0:
+                alert(` ${resultado} é ímpar.`);
+                break;
+        }
+    }
+    switch (true) {
+        case resultado > 0:
+            alert(` ${resultado} é positivo.`);
+            break;
+        case resultado < 0:
+            alert(`${resultado} é negativo.`);
+            break;
+
+    }
+    switch (resultado % 1 === 0) {
+        case true:
+            alert(` ${resultado} é um número inteiro.`);
+            break;
+        case false:
+            alert(` ${resultado} é um número decimal.`);
+            break;
+    }
+
     //SAÍDA
+
 
 </script>
